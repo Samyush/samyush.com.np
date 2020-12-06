@@ -67,8 +67,8 @@ class _CustomAppBarState extends State<CustomAppBar> {
             icons: Icon(FontAwesomeIcons.linkedin),
             press: () => setState(
               () {
-                _launched =
-                    _launchInWebViewOrVC('https://www.instagram.com/samyush/');
+                _launched = _launchInWebViewOrVC(
+                    'https://www.linkedin.com/in/samyush-m-4232a3150/');
               },
             ),
           ),
