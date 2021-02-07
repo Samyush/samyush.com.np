@@ -34,7 +34,7 @@ class _BodyState extends State<Body> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "hello".toUpperCase(),
+            "Free Learn, Join Today".toUpperCase(),
             style: Theme.of(context).textTheme.headline1.copyWith(
                   color: kTextcolor,
                   fontWeight: FontWeight.bold,
