@@ -33,15 +33,15 @@ class _BodyState extends State<Body> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          // Text(
+          //   "under construction".toUpperCase(),
+          //   style: Theme.of(context).textTheme.headline1.copyWith(
+          //         color: kTextcolor,
+          //         fontWeight: FontWeight.bold,
+          //       ),
+          // ),
           Text(
-            "under construction".toUpperCase(),
-            style: Theme.of(context).textTheme.headline1.copyWith(
-                  color: kTextcolor,
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          Text(
-            "Hey There the site is \n under construction but \nyou can look up on me by samyush on github too",
+            "Hey There the site is \nunder construction but \nyou can look up on me by samyush on github too",
             style: TextStyle(
               fontSize: 21,
               color: kTextcolor.withOpacity(0.34),
