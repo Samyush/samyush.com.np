@@ -34,14 +34,14 @@ class _BodyState extends State<Body> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Free Learn, Join Today".toUpperCase(),
+            "under construction".toUpperCase(),
             style: Theme.of(context).textTheme.headline1.copyWith(
                   color: kTextcolor,
                   fontWeight: FontWeight.bold,
                 ),
           ),
           Text(
-            "We teach coding and math for free, and \nA small personal institute to help all in need \nyou can look up on me by samyush on github too",
+            "Hey There the site is \n under construction but \nyou can look up on me by samyush on github too",
             style: TextStyle(
               fontSize: 21,
               color: kTextcolor.withOpacity(0.34),
