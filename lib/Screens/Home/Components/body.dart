@@ -41,7 +41,7 @@ class _BodyState extends State<Body> {
           //       ),
           // ),
           Text(
-            "Hey There the site is \nunder construction but \nyou can look up on me by samyush on github too",
+            "Hey There the site is \nunder construction but \nfor now you can look me on my other profile",
             style: TextStyle(
               fontSize: 21,
               color: kTextcolor.withOpacity(0.34),
