@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:samyush/Screens/Home/Components/body.dart';
+import 'package:samyush/xScreens/xHome/Components/body.dart';
 
 import 'Components/app_bar.dart';
 
