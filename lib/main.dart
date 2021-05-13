@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:samyush/Screens/splashScreen/splashScreen.dart';
 
 import 'constant.dart';
 import 'xScreens/xHome/home_screen.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: SplashDisplay(),
     );
   }
 }
