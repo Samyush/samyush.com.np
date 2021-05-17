@@ -9,7 +9,7 @@ class CustomAppBar extends StatefulWidget {
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
-  Future<void> _launched;
+  Future<void>? _launched;
 
   Future<void> _launchInWebViewOrVC(String url) async {
     if (await canLaunch(url)) {

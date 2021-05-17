@@ -11,7 +11,7 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  Future<void> _launched;
+  Future<void>? _launched;
 
   Future<void> _launchInWebViewOrVC(String url) async {
     if (await canLaunch(url)) {

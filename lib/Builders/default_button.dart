@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
-  final Icon icons;
-  final Function press;
+  final Icon? icons;
+  final Function? press;
   const DefaultButton({
-    Key key,
+    Key? key,
     this.icons,
     this.press,
   }) : super(key: key);
@@ -14,8 +14,8 @@ class DefaultButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(25),
       child: TextButton(
-        onPressed: press,
-        child: icons,
+        onPressed: press as void Function()?,
+        child: icons!,
       ),
     );
   }

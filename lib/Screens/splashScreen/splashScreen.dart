@@ -2,15 +2,15 @@ import 'dart:async';
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:samyush/Screens/HomePage/home.dart';
+import 'package:samyush/xScreens/xHome/home_screen.dart';
 
 bool isLoggedIn = true;
 
 class SplashDisplay extends StatefulWidget {
   final Color backgroundColor;
   final dynamic onClick;
-  final ImageProvider imageBackground;
-  final Gradient gradientBackground;
+  final ImageProvider? imageBackground;
+  final Gradient? gradientBackground;
   SplashDisplay(
       {this.onClick,
       /*0xFFFCBE4FE*/
@@ -32,8 +32,8 @@ class _SplashDisplayState extends State<SplashDisplay> {
       // It's fairly safe to assume this is using the in-built material
       // named route component
 
-      Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (BuildContext context) => Home()));
+      Navigator.of(context).pushReplacement(new MaterialPageRoute(
+          builder: (BuildContext context) => HomeScreen()));
     });
   }
 
@@ -51,7 +51,7 @@ class _SplashDisplayState extends State<SplashDisplay> {
                     ? null
                     : new DecorationImage(
                         fit: BoxFit.cover,
-                        image: widget.imageBackground,
+                        image: widget.imageBackground!,
                       ),
                 gradient: widget.gradientBackground,
                 color: widget.backgroundColor,
@@ -70,7 +70,7 @@ class _SplashDisplayState extends State<SplashDisplay> {
                         backgroundColor: Colors.transparent,
                         child: new Container(
                           child: Image.asset(
-                            'aeroplanesImages/flyingObject2.gif',
+                            'assets/aeroplanesImages/flyingObject2.gif',
 //                  height: 60,
                           ),
                         ),
@@ -80,12 +80,12 @@ class _SplashDisplayState extends State<SplashDisplay> {
                         padding: const EdgeInsets.only(top: 10.0),
                       ),
                       Text(
-                        'Welcome to samyush \nthe site is under construction',
+                        'Welcome \n \nThe site is under construction',
                         style: new TextStyle(
                           color: Colors.red,
                           fontFamily: 'Acme',
                           fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
+                          fontSize: 30.0,
                         ),
                       ),
                     ],
