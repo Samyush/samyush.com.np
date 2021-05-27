@@ -30,6 +30,10 @@ dependencies:
   cupertino_icons: ^1.0.3
   font_awesome_flutter: ^9.0.0
   url_launcher: ^6.0.3
+  google_fonts: ^2.0.0
+  flutter_svg: ^0.22.0
+  fl_chart: ^0.35.0
+  provider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +53,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/icons/
     - assets/aeroplanesImages/
   #   - images/a_dot_ham.jpeg
 

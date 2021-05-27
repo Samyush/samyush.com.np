@@ -2,7 +2,10 @@ import 'dart:async';
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:samyush/xScreens/xHome/home_screen.dart';
+import 'package:provider/provider.dart';
+// import 'package:samyush/Screens/HomePage/home.dart';
+import 'package:samyush/Screens/main/main_screen.dart';
+import 'package:samyush/controllers/MenuController.dart';
 
 bool isLoggedIn = true;
 
@@ -14,7 +17,7 @@ class SplashDisplay extends StatefulWidget {
   SplashDisplay(
       {this.onClick,
       /*0xFFFCBE4FE*/
-      this.backgroundColor = const Color(0xFFFCBE4FE),
+      this.backgroundColor = const Color(0xFFF000000),
       this.imageBackground,
       this.gradientBackground});
 
@@ -28,12 +31,20 @@ class _SplashDisplayState extends State<SplashDisplay> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 10), () {
       // It's fairly safe to assume this is using the in-built material
       // named route component
 
       Navigator.of(context).pushReplacement(new MaterialPageRoute(
-          builder: (BuildContext context) => HomeScreen()));
+        builder: (BuildContext context) => MultiProvider(
+          providers: [
+            ChangeNotifierProvider(
+              create: (context) => MenuController(),
+            ),
+          ],
+          child: MainScreen(),
+        ),
+      ));
     });
   }
 
@@ -70,7 +81,7 @@ class _SplashDisplayState extends State<SplashDisplay> {
                         backgroundColor: Colors.transparent,
                         child: new Container(
                           child: Image.asset(
-                            'assets/aeroplanesImages/flyingObject2.gif',
+                            'assets/aeroplanesImages/ironMan.gif',
 //                  height: 60,
                           ),
                         ),
@@ -80,12 +91,13 @@ class _SplashDisplayState extends State<SplashDisplay> {
                         padding: const EdgeInsets.only(top: 10.0),
                       ),
                       Text(
-                        'Welcome \n \nThe site is under construction',
+                        '\nWelcome to my Profile \n 10 Seconds Load says सम्युस',
+                        textAlign: TextAlign.center,
                         style: new TextStyle(
                           color: Colors.red,
                           fontFamily: 'Acme',
                           fontWeight: FontWeight.bold,
-                          fontSize: 30.0,
+                          fontSize: 25.0,
                         ),
                       ),
                     ],
