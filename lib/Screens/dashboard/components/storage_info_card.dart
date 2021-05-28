@@ -44,7 +44,7 @@ class StorageInfoCard extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
-                    "$numOfFiles Files",
+                    "$numOfFiles Views",
                     style: Theme.of(context)
                         .textTheme
                         .caption!
