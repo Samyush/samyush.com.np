@@ -13,7 +13,7 @@ class SideMenu extends StatelessWidget {
               child: Image.asset("assets/images/ironheart.png"),
             ),
             DrawerListTile(
-              title: "Dashbord",
+              title: "Samyush",
               svgSrc: "assets/icons/menu_dashbord.svg",
               press: () {},
             ),
