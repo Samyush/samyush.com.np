@@ -18,7 +18,7 @@ class Header extends StatelessWidget {
           ),
         if (!Responsive.isMobile(context))
           Text(
-            "Welcome!!! The site is under Construction",
+            "Welcome!!! 50% Web-Construction Complete",
             style: Theme.of(context).textTheme.headline6,
           ),
         if (!Responsive.isMobile(context))

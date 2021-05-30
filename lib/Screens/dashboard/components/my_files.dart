@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:samyush/models/MyFiles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constant.dart';
 import '../../../responsive.dart';
 import 'file_info_card.dart';
 
+const _url = 'https://g.page/samyush?share';
+
 class MyFiles extends StatelessWidget {
+  void _launchURL() async => await canLaunch(_url)
+      ? await launch(_url)
+      : throw 'Could not launch $_url';
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
@@ -26,9 +32,9 @@ class MyFiles extends StatelessWidget {
                       defaultPadding / (Responsive.isMobile(context) ? 2 : 1),
                 ),
               ),
-              onPressed: () {},
-              icon: Icon(Icons.add),
-              label: Text("Add New"),
+              onPressed: _launchURL,
+              icon: Icon(Icons.where_to_vote_sharp),
+              label: Text("Office Location"),
             ),
           ],
         ),

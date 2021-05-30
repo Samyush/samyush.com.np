@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
   @override
@@ -13,44 +14,47 @@ class SideMenu extends StatelessWidget {
               child: Image.asset("assets/images/ironheart.png"),
             ),
             DrawerListTile(
-              title: "Samyush",
+              title: "Samyush Business Web",
               svgSrc: "assets/icons/menu_dashbord.svg",
-              press: () {},
+              press: 'https://samyush.business.site/',
             ),
             DrawerListTile(
-              title: "Transaction",
+              title: "Transaction Nepal Bank",
               svgSrc: "assets/icons/menu_tran.svg",
-              press: () {},
+              press:
+                  'https://drive.google.com/file/d/1YysyMEzb5nbIICz5fdsJeohdWYtC4oYc/view?usp=sharing',
             ),
             DrawerListTile(
-              title: "Task",
+              title: "Transaction NIC Asia Bank",
               svgSrc: "assets/icons/menu_task.svg",
-              press: () {},
+              press:
+                  'https://drive.google.com/file/d/16Gh70vaYhLNS37ScRA4ZCoZfCM3_MAxL/view?usp=sharing',
             ),
             DrawerListTile(
               title: "Documents",
               svgSrc: "assets/icons/menu_doc.svg",
-              press: () {},
+              press: '',
             ),
             DrawerListTile(
               title: "Store",
               svgSrc: "assets/icons/menu_store.svg",
-              press: () {},
+              press:
+                  'https://www.google.com/maps/place/Samyush/@27.6826842,85.3111206,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb19ba81e808ef:0x42ed6206677e4b75!8m2!3d27.6826771!4d85.3133222',
             ),
             DrawerListTile(
               title: "Notification",
               svgSrc: "assets/icons/menu_notification.svg",
-              press: () {},
+              press: '',
             ),
             DrawerListTile(
               title: "Profile",
               svgSrc: "assets/icons/menu_profile.svg",
-              press: () {},
+              press: 'https://www.instagram.com/samyush/',
             ),
             DrawerListTile(
               title: "Settings",
               svgSrc: "assets/icons/menu_setting.svg",
-              press: () {},
+              press: '',
             ),
           ],
         ),
@@ -67,13 +71,17 @@ class DrawerListTile extends StatelessWidget {
     required this.press,
   });
 
-  final String title, svgSrc;
-  final VoidCallback press;
+  final String title, svgSrc, press;
+  // final VoidCallback press;
+
+  void _launchURL() async => await canLaunch(press)
+      ? await launch(press)
+      : throw 'Could not launch $press';
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: press,
+      onTap: _launchURL,
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
