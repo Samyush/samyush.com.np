@@ -25,7 +25,7 @@ List demoMyFiles = [
     color: primaryColor,
     percentage: 35,
     cloudLink:
-        'https://drive.google.com/file/d/1dOeZDHuV49s0zA-_zNBVDvc1c8ejjSxX/view?usp=sharing',
+        'https://drive.google.com/file/d/1OkNguZ-Z7wwPHPCKvooz31pQhDz_j2Oj/view?usp=sharing',
   ),
   CloudStorageInfo(
     title: "Google Gallery",
